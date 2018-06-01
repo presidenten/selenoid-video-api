@@ -116,7 +116,7 @@ This is my solution:
 
 ### For more details:
 - Docker integrations:
-[video.js](https://github.com/presidenten/selenoid-video-api/blob/master/src/video.js)
+[video.js](https://github.com/presidenten/selenoid-video-api/blob/master/lib/video.js)
 
 - Webdriver.io integration:
 [wdio.conf.js](https://github.com/presidenten/selenoid-video-api/blob/master/demo/wdio.conf.js)
