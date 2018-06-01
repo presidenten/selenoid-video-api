@@ -11,6 +11,9 @@ There is also easy integration with Allure reports to make them pretty:
 
 ![Allure example](./assets/allure_example.gif)
 
+Explore the allure example here: [allure-example-report-with-video](https://presidenten.github.io/allure-example-report-with-video)
+
+
 ## Prerequisites
 1. Install Node >= v8: [How to install node](https://nodejs.org/en/download/package-manager/)
 2. Install Docker: [How to install docker](https://docs.docker.com/install/)
