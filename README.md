@@ -26,23 +26,10 @@ There is also easy integration with Allure reports to make them pretty:
   ```shell
     cm selenoid start --vnc --tmpfs 128 --args "-video-recorder-image presidenten/selenoid-manual-video-recorder"
   ```
-5. (Optional, but highly recommended) Install [Allure cli](https://github.com/etki/allure-cli)
-
-  Linux:
-  ```shell
-    $ sudo apt-add-repository ppa:yandex-qatools/allure-framework
-    $ sudo apt-get update
-    $ sudo apt-get install allure-cli
-  ```
-  Mac:
-  ```shell
-    $ brew tap allure-framework/allure
-    $ brew install allure-cli
-  ```
 - Make a Webdriver.io project [How to get started with Webdriver.io](http://webdriver.io/guide/getstarted/install.html)
 
 ## Test the demo
-- To run the demo, make sure prerequisites 1-5 are in place, then:
+- To run the demo, make sure prerequisites 1-4 are in place, then:
 ```shell
   git clone https://github.com/presidenten/selenoid-video-api.git
   cd selenoid-video-api
@@ -54,19 +41,19 @@ There is also easy integration with Allure reports to make them pretty:
   cd demo
   npm install
 ```
-  If not using Allure, change row 4 in `wdio.conf.js` from `usingAllure: true,` to `usingAllure: false,`
+- Run tests
 ```shell
   npm run test --silent
 ```
-
-- If using Allure
+- Generate allure report (optional):
 ```shell
-  npm run test --silent
   npm run allure
 ```
-  Then navigate to from http://localhost:8080/index.html failing test and check `Execution Video in test body`
+  Then navigate to from http://localhost:8080/index.html, click on a failing test and check `Execution Video` in test body
 
-- If not using Allure, the video will be found in `~/.aerokube/selenoid/video` (otherwise they are moved to the allure report dir)
+- If not using Allure, the video will be found in `~/.aerokube/selenoid/video`
+
+  Otherwise they are moved to the allure report dir
 ```shell
  ~/.aerokube/selenoid/video$ ls
 User-list-should-be-able-to-sort-ascending-chrome-2018-06-01--16-10.mp4
