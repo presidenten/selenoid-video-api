@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+
+        const app = {
+          name: 'app',
+          data() {
+            return {
+              sortDir: undefined,
+              users: ['Johan', 'Tobbe', 'Carl', 'Madde', 'Sofia'],
+            };
+          },
+          computed: {
+            sortedUsers() {
+              if(this.sortDir === 1) {
+                return this.users.sort();
+              }
+              else if(this.sortDir === -1) {
+                return this.users.sort().reverse();
+              }
+              else {
+                return this.users;
+              }
+            }
+          },
+          template: `
+            <div class="user-list">
+              <div class="name" v-for="user in sortedUsers">{{user}}</div>
+              <button class="sort ascending" @click="sortDir = 1">Sort</button>
+              <button class="sort descending" @click="sortDir = -1">Reverse sort</button>
+            </div>
+          `,
+        }
+
+        new Vue({
+          el: '#app',
+          render: h => h(app),
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
