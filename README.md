@@ -45,17 +45,23 @@ There is also easy integration with Allure reports to make them pretty:
 - To run the demo, make sure prerequisites 1-5 are in place, then:
 ```shell
   git clone https://github.com/presidenten/selenoid-video-api.git
-  cd selenoid-video-api/demo
+  cd selenoid-video-api
+
+  # Install project dependencies
+  npm install
+
+  # Install demo dependencies
+  cd demo
   npm install
 ```
   If not using Allure, change row 4 in `wdio.conf.js` from `usingAllure: true,` to `usingAllure: false,`
 ```shell
-  npm run test
+  npm run test --silent
 ```
 
 - If using Allure
 ```shell
-  npm run test
+  npm run test --silent
   npm run allure
 ```
   Then navigate to from http://localhost:8080/index.html failing test and check `Execution Video in test body`
