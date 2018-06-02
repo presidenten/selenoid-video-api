@@ -70,9 +70,9 @@ const wdio = {
   /**
    * Finalize report if using allure
    */
-  onComplete() {
+  onComplete(shortenSeleniumUrls) {
     if (config.usingAllure) {
-      allure.finalizeReport();
+      allure.finalizeReport(shortenSeleniumUrls);
     }
   },
 };
