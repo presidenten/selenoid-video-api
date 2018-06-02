@@ -25,7 +25,7 @@ const wdio = {
    * Start recording before each test
    * Pause a short while to get nice video
    */
-  beforeTest(browser, test, { size, framerate, codec }) {
+  beforeTest(browser, test, { size, framerate, codec, pixelFormat }) {
     // Generate filename for screenshots and video
     browser.globals.currentRecordingName = helpers.generateFilename(browser, test);
 
@@ -35,6 +35,7 @@ const wdio = {
         size,
         framerate,
         codec,
+        pixelFormat,
       });
 
       browser.pause(config.videoMinTime);
