@@ -9,7 +9,7 @@ This makes it possible to run many test suites in one go and still make separate
 
 There is also easy integration with Allure reports to make them pretty:
 
-![Allure example](./assets/allure_example.gif)
+![Allure example](https://presidenten.github.io/allure-example-report-with-video/assets/allure_example.gif)
 
 Explore the allure example here: [allure-example-report-with-video](https://presidenten.github.io/allure-example-report-with-video)
 
