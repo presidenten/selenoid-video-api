@@ -3,7 +3,7 @@ const selenoidVideoApi = require('../index.js');
 const rec = selenoidVideoApi.getWdioHooks({
   usingAllure: true,
   saveAllVideos: false,
-  videoMinTime: 100,
+  videoMinTime: 50,
 });
 
 
