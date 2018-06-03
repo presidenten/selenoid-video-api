@@ -1,5 +1,5 @@
 
-describe('User list', () => {
+describe('User interactions', () => {
   beforeEach(() => {
     browser.url('http://www.seleniumeasy.com/test/');
   });
