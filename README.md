@@ -54,15 +54,15 @@ Explore the allure example here: [allure-example-report-with-video](https://pres
 ```
   Then navigate to from http://localhost:8080/index.html, click on a failing test and check `Execution Video` in test body
 
-- If not using Allure, the video will be found in `~/.aerokube/selenoid/video`
-
-  Otherwise they are moved to the allure report dir
+- Videos are moved to the output dir and the report dir as report attachments
+The library assumes that the selenoid config dir is default (~/.aerokube)
 ```shell
- ~/.aerokube/selenoid/video$ ls
-User-list-should-be-able-to-sort-ascending-chrome-2018-06-01--16-10.mp4
-User-list-should-be-able-to-sort-descending-chrome-2018-06-01--16-10.mp4
+ ~/github/selenium-video-api/demo/e2e/results$ ls
+  User-list-should-be-able-to-move-slider-chrome-2018-06-03--10-29.mp4
+  User-list-should-be-able-to-move-slider-chrome-2018-06-03--10-29.png
+  User-list-should-be-able-to-multi-select-in-dropdown-chrome-2018-06-03--10-29.mp4
+  User-list-should-be-able-to-multi-select-in-dropdown-chrome-2018-06-03--10-29.png
 ```
-Selenoid also hosts them for easy viewing: [http://localhost:4444/video](http://localhost:4444/video)
 
 ## Installation
 - Add this module to your test repo
