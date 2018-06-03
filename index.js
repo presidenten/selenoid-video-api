@@ -59,21 +59,15 @@ const wdio = {
   },
 
   /**
-   * Close video recorder after tests
-   */
-  after(browser) {
-    helpers.runIfVideoEnabled(browser, () => {
-      video.close(browser.globals.clientIp);
-    });
-  },
-
-  /**
    * Finalize report if using allure
+   * Close all video recorders
    */
-  onComplete(shortenSeleniumUrls) {
+  onComplete(wdioConfig, shortenSeleniumUrls) {
     if (config.usingAllure) {
-      allure.finalizeReport(shortenSeleniumUrls);
+      allure.finalizeReport(wdioConfig, shortenSeleniumUrls);
     }
+
+    video.closeAll();
   },
 };
 
