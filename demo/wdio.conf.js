@@ -16,7 +16,7 @@ const config = {
     browser.windowHandlePosition({x: 0, y: 0});
     browser.windowHandleSize({width: 1320, height: 768});
 
-    rec.before(browser, config.baseUrl);
+    rec.before(browser);
   },
   beforeTest: function (test) {
     rec.beforeTest(browser, test, {
@@ -27,11 +27,8 @@ const config = {
   afterTest: function (test) {
     rec.afterTest(browser, test, config.outputDir);
   },
-  after: function (result, capabilities, specs) {
-    rec.after(browser);
-  },
   onComplete: function(exitCode, config, capabilities) {
-    rec.onComplete();
+    rec.onComplete(config);
   },
 
 
@@ -49,31 +46,28 @@ const config = {
   // ===============
   // Custom settings
   // ===============
+  host: 'localhost',                            // Selenium host url
+  //services: ['selenium-standalone'],
   specs: [
-    './src/**/*.e2e.js',                        // Which files to run
+    './specs/**/*.e2e.js',                        // Which files to run
   ],
   outputDir: './e2e/results/',                  // Output dir for the report
-  baseUrl: 'localhost:8080',                    // Baseurl
-  host: 'localhost',                            // Selenium host url
   reporters: ['dot', 'allure'],                 // Reporters: Dot for terminal, allure for web
   reporterOptions: {
     allure: {
       outputDir: './e2e/results/allure-raw/',   // Output dir for raw report
     },
   },
-  services: ['static-server'],
-  staticServerFolders: [{ mount: '/', path: './src' }],
-  staticServerPort: 8080,
 
 
   // ==================
   // Some nice defaults
   // ==================
+  deprecationWarnings: false,
   maxInstances: 10,
   sync: true,
   logLevel: 'silent',
   coloredLogs: true,
-  deprecationWarnings: true,
   bail: 0,
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,

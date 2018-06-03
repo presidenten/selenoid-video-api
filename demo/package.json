@@ -28,7 +28,6 @@
     "wdio-json-reporter": "^0.3.1",
     "wdio-junit-reporter": "^0.4.3",
     "wdio-selenium-standalone-service": "^0.0.10",
-    "wdio-static-server-service": "^1.0.1",
     "webdriverio": "^4.12.0"
   }
 }
