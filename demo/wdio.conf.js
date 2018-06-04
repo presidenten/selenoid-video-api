@@ -1,9 +1,10 @@
 const selenoidVideoApi = require('../index.js');
 
 const rec = selenoidVideoApi.getWdioHooks({
-  usingAllure: true,
-  saveAllVideos: false,
-  videoMinTime: 50,
+  usingAllure: true,     // Update Allurereport with videos
+  saveAllVideos: false,  // If true, also saves videos for successful test cases
+  videoMinTime: 50,      // Min time for tests. Increase if you have very short tests
+  waitForVNCTime: 2750,  // How long to await VNC connection. Increase if first video is black
 });
 
 

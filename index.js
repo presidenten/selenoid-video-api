@@ -73,7 +73,7 @@ const wdio = {
 
 
 module.exports = {
-  getWdioHooks({ usingAllure=false, saveAllVideos=false, waitForVNCTime=2000, videoMinTime=500 }) {
+  getWdioHooks({ usingAllure=false, saveAllVideos=false, waitForVNCTime=2500, videoMinTime=500 }) {
     config.usingAllure = usingAllure;
     config.saveAllVideos = saveAllVideos;
     config.waitForVNCTime = waitForVNCTime;
