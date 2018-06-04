@@ -37,8 +37,6 @@ const wdio = {
         codec,
         pixelFormat,
       });
-
-      browser.pause(config.videoMinTime);
     });
   },
 
@@ -73,10 +71,9 @@ const wdio = {
 
 
 module.exports = {
-  getWdioHooks({ usingAllure=false, saveAllVideos=false, waitForVNCTime=2500, videoMinTime=500 }) {
+  getWdioHooks({ usingAllure=true, saveAllVideos=false, videoMinTime=50 }) {
     config.usingAllure = usingAllure;
     config.saveAllVideos = saveAllVideos;
-    config.waitForVNCTime = waitForVNCTime;
     config.videoMinTime = videoMinTime;
 
     return wdio;
