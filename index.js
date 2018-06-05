@@ -71,10 +71,11 @@ const wdio = {
 
 
 module.exports = {
-  getWdioHooks({ usingAllure=true, saveAllVideos=false, videoMinTime=50 }) {
+  getWdioHooks({ usingAllure=true, saveAllVideos=false, videoMinTime=50, screenshots=false }) {
     config.usingAllure = usingAllure;
     config.saveAllVideos = saveAllVideos;
     config.videoMinTime = videoMinTime;
+    config.screenshots = screenshots;
 
     return wdio;
   },

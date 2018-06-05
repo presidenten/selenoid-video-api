@@ -4,6 +4,7 @@ const rec = selenoidVideoApi.getWdioHooks({
   usingAllure: true,     // Update Allurereport with videos
   saveAllVideos: false,  // If true, also saves videos for successful test cases
   videoMinTime: 50,      // Min time for tests. Increase if you have very short tests
+  screenshots: false,    // Save screenshots on failed tests
 });
 
 
