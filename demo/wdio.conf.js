@@ -5,6 +5,7 @@ const rec = selenoidVideoApi.getWdioHooks({
   saveAllVideos: false,  // If true, also saves videos for successful test cases
   videoMinTime: 50,      // Min time for tests. Increase if you have very short tests
   screenshots: false,    // Save screenshots on failed tests
+  removeSteps: true,    // Remove all steps, and only save video
 });
 
 
