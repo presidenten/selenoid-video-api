@@ -1707,8 +1707,8 @@ restore-cursor@^2.0.0:
     signal-exit "^3.0.2"
 
 rgb2hex@~0.1.0:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/rgb2hex/-/rgb2hex-0.1.1.tgz#81abc922b60e9087a42c3e1ce20bf62d2359e400"
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/rgb2hex/-/rgb2hex-0.1.9.tgz#5d3e0e14b0177b568e6f0d5b43e34fbfdb670346"
 
 rimraf@^2.2.8, rimraf@^2.6.2:
   version "2.6.2"
